@@ -325,6 +325,35 @@ section{
   transform-origin: left;
 }
 
+.menu-btn {
+  display: none; /* Sembunyikan di layar besar */
+  font-size: 24px;
+  cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+  .menu-btn {
+      display: block; /* Tampilkan di mobile */
+      position: absolute;
+      right: 5%;
+      top: 50%;
+      transform: translateY(-50%);
+  }
+  
+  .navbar {
+      display: none; /* Sembunyikan navbar default */
+  }
+  
+  .navbar.active {
+      display: block;
+      position: absolute;
+      top: 100%; /* Posisi tepat di bawah header */
+      left: 0;
+      width: 100%;
+      background: #051129;
+      padding: 1rem;
+  }
+}
+
 @keyframes animate {
   100%{
     transform: scaleX(1);
